@@ -1,13 +1,20 @@
 import { Route } from '@angular/router';
-import { GamesComponent } from './tv/games/games.component';
-import { WelcomeComponent } from './tv/welcome/welcome.component';
-import { TvComponent } from './tv/tv.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { GamesComponent } from './components/games/games.component';
+import { Component } from '@angular/core';
 
 export const APP_ROUTE: Route[] = [
     {
-        path: '',
-        component: TvComponent,
-        loadChildren: () => import('./tv/tv.route').then((m) => m.TV_ROUTE),
+        path: 'welcome',
+        loadComponent: () => import('./components/welcome/welcome.component').then((m) => m.WelcomeComponent) ,
+    },
+    {
+        path: 'games',
+        loadComponent: () => import('./components/games/games.component').then((m) => m.GamesComponent) ,
+    },
+    {
+        path: 'about',
+        loadComponent: () => import('./components/about/about.component').then((m) => m.AboutComponent) ,
     },
     { path: '', redirectTo: '/welcome', pathMatch: 'full' },
     { path: '**', redirectTo: '/welcome' },

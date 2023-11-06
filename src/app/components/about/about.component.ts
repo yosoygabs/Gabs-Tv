@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-tv',
+  selector: 'app-about',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './tv.component.html',
-  styleUrls: ['./tv.component.scss']
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
-export class TvComponent {
+export class AboutComponent {
 
 }
