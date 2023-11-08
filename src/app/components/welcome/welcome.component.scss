@@ -1,38 +1,178 @@
-// /* You can add global styles to this file, and also import other style files */
-// html {
-//     //background-image: url("assets/imgs/shutted-down.png");
-//     //background-size:auto;
-//     //background-repeat: no-repeat;
-//     background-color: black;
-//     //background-position-x: center;
-// }
+  // /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: black;
+  background: linear-gradient(rgba(0, 0, 0, 0.2) 2px, transparent 2px, transparent 4px, rgba(0, 0, 0, 0.2) 4px);
+  background-size: 100% 4px;
+}
 
-// .nav-link {
-//     cursor: pointer;
-// }
+.subtitulo {
+  font-size: 35px;
+  margin-top: 150px;
+}
 
-// #gameFolderimg {
-//     margin-left: 150px;
-//     margin-top: 150px;
-//     height: 70px;
-//     width: 90px;
-//     background-image: url('assets/imgs/gamesfolder.PNG');
-//     :hover {
-//         background-image: url('assets/imgs/gamesfolderopen.png');
-//     }
-// }
 
-// #juegosFoot {
-//     color: wheat ;
-//     margin-left: 25px;
-//     margin-top: 3px;
 
-// }
+.centered {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.narrow-p {
+  // margin-top: 40px;
+  // margin-left: 85px;
+  max-height: 20px; 
+  max-width: 500px;
+  font-size: 1.2em;
+  color: #00ff00; /* Verde brillante */
+background-color: #000; /* Fondo negro */
 
-//   .gameFolderimg {
-//     height: 70px;
-//     width: 90px;
-//     background-image: url('assets/imgs/gamesfolder.PNG');
-//     background-size: cover;
-//     transition: background-image 0.3s; /* Agrega una transición suave */
-//   }
+  padding-bottom: 10px;
+
+}
+
+p {
+  max-height: 10px;
+  text-align: center;
+    font-size: 24px;
+    color: lightblue; /* Color del texto */
+  font-family: "Courier New", monospace; /* Fuente estilo CRT */
+  margin-bottom: 20px;
+}
+#contenedor {
+    
+    display: flex;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+img {
+  
+  display: block;
+  max-width: 100%;
+  width: 700px;
+}
+.crt-effect {
+  animation: crt-blink 0.3s infinite;
+}
+
+.enlace {
+  animation: glitch 3s ease;
+  text-decoration: none;
+}
+
+img {
+  animation: fadeIn 3s ease;
+}
+
+ @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      filter:blur(20px);
+    }
+    10% {
+      opacity: 1;
+      filter: brightness(2) blur(10px)
+    }
+ }
+
+.pink {
+  color: pink;
+}
+.yellow {
+  color: lightblue;
+}
+.lightblue {
+  color: lightblue;
+}
+.code {
+  color:pink;
+}
+.wrapper {
+  position: absolute;
+  margin-top: 70px;
+  margin-left: 100px;
+  
+  white-space: nowrap;
+   }
+.code {
+  animation: typewriter 1s steps(14) 1s 1 normal both;
+  line-height: 1;
+  margin: 0;
+  display: inline-block;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.cursor {
+  display: inline-block;
+  animation: blinkTextCursor 500ms infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+:root {
+  --crt-red: rgb(218, 49, 49);
+  --crt-green: rgb(112, 159, 115);
+  --crt-blue: rgb(40, 129, 206);
+}
+/* Global */
+html {
+  font-size: 1.5rem;
+  // font-family: "Courier New", monospace;
+  
+}
+
+.crt {
+      
+      text-shadow: 0 0 0.2em currentColor, 1px 1px rgba(255, 0, 255, 0.5),
+        -1px -1px rgba(0, 255, 255, 0.4);
+      position: relative;
+      &:before,
+      &:after {
+        content: "";
+        transform: translateZ(0);
+        pointer-events: none;
+        //opacity: 0.5;
+        mix-blend-mode: overlay;
+        position: absolute;
+        // height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+    
+      &:before {
+        background: repeating-linear-gradient(
+          var(--crt-red) 0px,
+          var(--crt-green) 2px,
+          var(--crt-blue) 4px
+        );
+      }
+      &:after {
+        background: repeating-linear-gradient(
+          90deg,
+          var(--crt-red) 1px,
+          var(--crt-green) 2px,
+          var(--crt-blue) 3px
+        );
+      }
+    }

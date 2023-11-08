@@ -1,7 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-* {
+
+
+
+body {
     background-color: black;
 }
+@media (min-width: 1200px) {
+    body {
+        background-image: url('./assets/marcotv-resized.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        padding: 20px;
+        
+    }
+}
+
 ol {
     list-style-type: none;
 }
@@ -9,8 +23,4 @@ li {
     text-decoration: none;
     cursor: pointer;
     color: wheat;   
-}
-
-.games {
-  
 }

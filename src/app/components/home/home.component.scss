@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&family=Yesteryear&display=swap');
+
+
+// body {
+//     background-color: aqua;
+// }
+.grid-layout {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.caja {
+    width:150px;
+    height: 150px;
+    margin: 15px;
+    // text-align:initial;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    
+    color: wheat;
+    font-family: 'OldStandardTT';
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+img {
+    position: absolute;
+    width: 120px;
+}
+
+.games {
+    display: grid;
+    margin-left: 20px;
+    margin-top: 100px;
+}
+
+#j-label {    
+    padding-top: 70px;
+    padding-left: 30px;
+}
+
+// .games {
+//     display: block;
+//     margin-top: 10%;
+//     margin-left: 15%;
+// }
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000; /* Fondo negro, similar a una pantalla de televisor antiguo */
+}
+
+.about {
+    display: grid;
+    margin-top: 0;
+    margin-left: 10px;
+    
+}
+
+.sobre-nosotros {
+    margin-left: 10px;
+}
+
+.about-label{
+    padding-top: 95px;
+    padding-left: 30px;
+}
